@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>NUmeroAndDev/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Kotlin",
+      "matchPackageNames": [
+        "/^org\\.jetbrains\\.kotlin:/",
+        "/^org\\.jetbrains\\.kotlin\\./",
+        "/^com\\.google\\.devtools\\.ksp:/"
+      ]
+    },
+    {
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchDatasources": [
+        "maven"
+      ],
+      "registryUrls": [
+        "https://dl.google.com/android/maven2/",
+        "https://repo.maven.apache.org/maven2",
+        "https://jitpack.io",
+        "https://plugins.gradle.org/m2/"
+      ]
+    }
+  ]
+}
